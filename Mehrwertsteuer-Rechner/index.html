@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<main>
+			<section>
+				<h1>Mehrwertsteuer-Rechner</h1>
+				<form action="onsubmit">
+					<p>Was soll berechnet werden?</p>
+					<!-- <div class="brutto-netto"> -->
+					<div>
+						<input
+							onchange="check(event)"
+							type="radio"
+							id="brutto"
+							name="mws-art"
+							checked
+						/>
+						<label for="brutto"
+							>Mehrwertsteuer aufschlagen (Netto zu Brutto)</label
+						>
+					</div>
+					<div>
+						<input
+							onchange="check(event)"
+							type="radio"
+							id="netto"
+							name="mws-art"
+							checked
+						/>
+						<label for="netto">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+					</div>
+					<!-- </div> -->
+					<p>Mehrwertsteuersatz</p>
+					<input type="radio" name="steuersatz" id="mws19" checked />
+					<span>19 %</span>
+
+					<input type="radio" name="steuersatz" id="mws7" /> <span>7 %</span>
+
+					<p class="betrag-change">
+						Nettobetrag (Preis ohne Mehrwertsteuer) in Euro <span>*</span>
+					</p>
+					<div class="eingabe-bereich">
+						<input type="number" value="" id="input" />
+						<input
+							onclick="berechneMWS(event)"
+							type="submit"
+							name="submit-btn"
+							id="submit-id"
+							value="BERECHNEN"
+						/>
+					</div>
+
+					<h3>Ergebnis</h3>
+					<p>Mehrwertsteuerbetrag</p>
+					<h2 class="mws-betrag"></h2>
+					<p>Bruttobetrag (Endpreis)</p>
+					<h2 class="mws-gesammt"></h2>
+				</form>
+			</section>
+		</main>
+
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>
