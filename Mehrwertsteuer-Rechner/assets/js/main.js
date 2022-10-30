@@ -12,12 +12,6 @@ function check(event) {
 	}
 }
 
-// function check2(event) {
-// 	event.preventDefault();
-// 	let getInput2 = document.getElementById("input").value;
-// 	getInput2 = getInput2.value.toFixed(2);
-// }
-
 function berechneMWS(event) {
 	event.preventDefault();
 
